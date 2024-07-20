@@ -18,11 +18,57 @@ To set up the project, you will need to install the necessary Python packages. I
    python -m venv .venv
    source .venv/bin/activate  # Linux/MacOS
    .\.venv\Scripts\activate   # Windows
-
+   ```
 
 2. **Install the required packages:**
 
 Use the requirements.txt file to install all necessary dependencies:
-    ```sh
-    pip install -r requirements.txt
+   ```sh
+   pip install -r requirements.txt
+   ```
 
+## Usage
+### Command-Line Tool
+
+To run the username generator script (`ugen.py`), you need to provide an output file and one or more input files. The input files should contain user records, and the output file will contain the generated usernames along with the original records.
+
+Example usage:
+
+ ```sh
+   python3 ugen.py --output output_file.txt input_file1.txt input_file2.txt
+
+   ```
+## Testing
+
+To run the unit tests for the project, use the test.py script. This script uses pytest to run tests with the specified test data file.
+
+Example usage:
+
+ ```sh
+   python3 test.py ugen.py test_data.txt
+
+   ```
+
+## Generating Reports
+
+Test results are automatically saved in a JUnit XML report file named report.xml. You can review this file to analyze the test results.
+
+Example usage:
+
+ ```sh
+   python3 test.py ugen.py test_data.txt
+
+   ```
+
+## Requirements
+
+The project requires the following Python packages, listed in requirements.txt:
+
+`pytest`: For running the unit tests.
+
+You can install these dependencies using the command:
+
+ ```sh
+   pip install -r requirements.txt
+
+   ```
